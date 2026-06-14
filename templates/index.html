@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart AI Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h1>🤖 Smart AI Assistant</h1>
+
+    <form method="POST">
+
+        <select name="function">
+            <option value="question">Question Answering</option>
+            <option value="summary">Text Summarization</option>
+            <option value="creative">Creative Content</option>
+            <option value="advice">Study Advice</option>
+</select>
+
+        <textarea name="user_input" placeholder="Enter your text here..." required></textarea>
+
+        <button type="submit">Generate Response</button>
+
+    </form>
+
+    {% if response %}
+<div class="response">
+    <h3>Response:</h3>
+    <p>{{ response }}</p>
+
+    <h4>Was this response helpful?</h4>
+
+    <form action="/feedback" method="POST">
+        <button type="submit" name="feedback" value="Helpful">
+            👍 Helpful
+        </button>
+
+        <button type="submit" name="feedback" value="Not Helpful">
+            👎 Not Helpful
+        </button>
+    </form>
+
+</div>
+{% endif %}
+
+</div>
+
+</body>
+</html>
