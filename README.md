@@ -1,4 +1,6 @@
-# Smart AI Assistant
+# 🤖 Smart AI Assistant
+
+AI-powered Flask web application for question answering, text summarization, content generation, and study assistance.
 
 ## Project Description
 Smart AI Assistant is a Flask-based web application that can perform multiple tasks based on user input.
@@ -13,7 +15,7 @@ Smart AI Assistant is a Flask-based web application that can perform multiple ta
 - User-friendly web interface
 - Feedback system
 - Feedback stored in feedback.txt
-- Sky-blue UI design
+- Modern Dark Glassmorphism UI
 
 ## Technologies Used
 - Python
